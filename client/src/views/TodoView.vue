@@ -2,9 +2,9 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import MainLayout from '@/layouts/MainLayout.vue'
-import TodoForm from '@/components/Todos/TodoForm.vue'
-import TodoList from '@/components/Todos/TodoList.vue'
-import TodoFilter from '@/components/Todos/TodoFilter.vue'
+import TodoForm from '@/components/todos/TodoForm.vue'
+import TodoList from '@/components/todos/TodoList.vue'
+import TodoFilter from '@/components/todos/TodoFilter.vue'
 import type { Todo } from '@/types/todo'
 
 const todos = ref<Todo[]>([])

@@ -24,6 +24,12 @@ const handleSubmit = () => {
     title.value = ''
   }
 }
+
+const priorityClasses = {
+  low: 'bg-green-100 ring-1 ring-green-600/20',
+  medium: 'bg-yellow-100 ring-1 ring-yellow-600/20',
+  high: 'bg-red-100 ring-1 ring-red-600/20'
+}
 </script>
 
 <template>
@@ -42,13 +48,14 @@ const handleSubmit = () => {
       <div class="flex gap-4">
         <select
             v-model="priority"
-            class="px-4 py-2.5 text-sm rounded-lg border border-slate-300
-                 focus:border-violet-500 focus:ring-4 focus:ring-violet-500/20
-                 bg-white"
+            :class="{
+              'px-4 py-2.5 text-sm rounded-lg border border-slate-300 focus:border-violet-500 focus:ring-4 focus:ring-violet-500/20': true,
+              [priorityClasses[priority]]: true
+            }"
         >
-          <option value="low">Low Priority</option>
-          <option value="medium">Medium Priority</option>
-          <option value="high">High Priority</option>
+          <option value="low" class="bg-green-100">Low Priority</option>
+          <option value="medium" class="bg-yellow-100">Medium Priority</option>
+          <option value="high" class="bg-red-100">High Priority</option>
         </select>
         <button
             type="submit"
@@ -64,3 +71,9 @@ const handleSubmit = () => {
     </form>
   </div>
 </template>
+
+<style scoped>
+select option {
+  padding: 0.5rem;
+}
+</style>

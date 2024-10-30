@@ -4,7 +4,8 @@ import {ref} from 'vue'
 import {UsersRound} from 'lucide-vue-next'
 
 const navigation = ref([
-  {name: 'Tasks', href: '/', current: true},
+  {name: 'Tasks', href: '/tasks', current: true},
+  {name: 'Shopping list', href: '/shopping-list', current: true},
   {name: 'Calendar', href: '/calendar', current: true},
   {name: 'Budget', href: '/budget', current: true},
   {name: 'Statistics', href: '/statistics', current: false},
@@ -13,10 +14,10 @@ const navigation = ref([
 
 <template>
   <nav class="flex items-center justify-between flex-wrap bg-slate-900 p-6">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <router-link to="/" class="flex items-center flex-shrink-0 text-white mr-6 hover:text-violet-600">
       <UsersRound class="h-8 w-8 text-violet-600"/>
       <span class="font-semibold text-xl tracking-tight ml-3">Homeography</span>
-    </div>
+    </router-link>
     <div class="block lg:hidden">
       <button
           class="flex items-center px-3 py-2 border rounded text-violet-600 border-teal-400 hover:text-white hover:border-white">

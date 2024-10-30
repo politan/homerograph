@@ -1,15 +1,16 @@
-import { describe, it, expect, beforeEach } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ShoppingList from '../ShoppingList.vue'
 import ShoppingForm from '../ShoppingForm.vue'
 import ShoppingFilter from '../ShoppingFilter.vue'
 import ShoppingListItem from '../ShoppingListItem.vue'
+import type { ShoppingItem } from '@/types/shopping'
 
-const mockItems = [
+const mockItems: ShoppingItem[] = [
   { id: 1, name: 'Milk', quantity: 1, category: 'groceries', purchased: false },
   { id: 2, name: 'Soap', quantity: 2, category: 'household', purchased: true },
   { id: 3, name: 'Bread', quantity: 1, category: 'groceries', purchased: false }
-] as const
+]
 
 describe('ShoppingList', () => {
   it('renders all items when filter is "all"', () => {

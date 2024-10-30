@@ -13,9 +13,9 @@ const emit = defineEmits<{
 }>()
 
 const priorityClasses = {
-  low: 'text-green-800 bg-green-50 ring-1 ring-green-600/20',
-  medium: 'text-yellow-800 bg-yellow-50 ring-1 ring-yellow-600/20',
-  high: 'text-red-800 bg-red-50 ring-1 ring-red-600/20'
+  low: 'text-green-800 bg-green-100 ring-1 ring-green-600/20',
+  medium: 'text-yellow-800 bg-yellow-100 ring-1 ring-yellow-600/20',
+  high: 'text-red-800 bg-red-100 ring-1 ring-red-600/20'
 }
 </script>
 
@@ -48,7 +48,7 @@ const priorityClasses = {
         {{ todo.title }}
       </span>
       <span
-          :class="[
+          :class="[ 
           priorityClasses[todo.priority],
           'px-2.5 py-0.5 rounded-full text-xs font-medium'
         ]"

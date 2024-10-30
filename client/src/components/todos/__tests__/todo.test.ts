@@ -10,7 +10,7 @@ const localStorageMock = {
   getItem: vi.fn(),
   setItem: vi.fn(),
 };
-global.localStorage = localStorageMock as any;
+global.localStorage = localStorageMock as unknown as Storage;
 
 // Mock router-link component
 const routerLinkStub = {

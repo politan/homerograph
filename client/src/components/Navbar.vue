@@ -16,7 +16,7 @@ const navigation = ref([
   <nav class="flex items-center justify-between flex-wrap bg-slate-900 p-6">
     <router-link to="/" class="flex items-center flex-shrink-0 text-white mr-6 hover:text-violet-600">
       <UsersRound class="h-8 w-8 text-violet-600"/>
-      <span class="font-semibold text-xl tracking-tight ml-3">Homeography</span>
+      <span class="font-semibold text-xl tracking-tight ml-3">Homeograph</span>
     </router-link>
     <div class="block lg:hidden">
       <button

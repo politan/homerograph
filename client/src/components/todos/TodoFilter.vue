@@ -15,11 +15,11 @@ const emit = defineEmits<{
   <div class="bg-white rounded-xl shadow-sm mb-8">
     <nav class="flex" aria-label="Tabs">
       <button
-          v-for="tab in ['all', 'active', 'completed']"
+          v-for="tab in props.modelValue"
           :key="tab"
           @click="emit('update:modelValue', tab as 'all' | 'active' | 'completed')"
           :class="[
-          modelValue === tab
+          props.modelValue === tab
             ? 'border-b-2 border-violet-500 text-violet-600'
             : 'border-b-2 border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300',
           'flex-1 py-4 px-1 text-center font-medium text-sm'
